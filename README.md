@@ -14,27 +14,66 @@
 Write code that prints out all the numbers from 1 to 10 as a single string.
 (Hint: the `String()` function can convert an Int to a String)
 
+var numString = ""
+for num in 1...10 {
+    numString += String(num)
+}
+print(numString)
+
 ***
 ## Question 2
 
 Write code that prints out all the even numbers from 5 to 51 as a single string.
+
+var numString = ""
+for num in 5...51 {
+    if num % 2 == 0 {
+        numString += String(num)
+    }
+}
+print(numString)
+
 
 ***
 ## Question 3
 
 Write code that prints out every number ending in 4 between 1 and 60 as a single string.
 
+for num in 1...60{
+if num % 10 == 4 {
+   print(num)
+}
+}
+
 ***
 ## Question 4
 
 Print each character in the string `"Hello world!"`
+
+let greeting = "Hello world!"
+var counter = 0
+for char in greeting {
+    if counter < 11 {
+        print(char)
+        counter += 1
+    } else { break }
+}
+
 
 ***
 ## Question 5
 
 Print out the last character in the string below.  You cannot use the Character literal "!" (i.e you must access `myStringSeven`'s characters).
 
-`let myStringSeven = "Hello world!"`
+
+let myStringSeven = "Hello world!"
+let endIndex = myStringSeven.endIndex
+let lastCharacterIndex =
+    myStringSeven.index(before: endIndex)
+let lastCharacter =
+    myStringSeven[lastCharacterIndex]
+print(lastCharacter)
+
 
 ***
 ## Question 6
@@ -43,10 +82,16 @@ Write code that switches on a string, given the following conditions:
 - If the string's length is even, print out every character.
 - If the string's length is odd, print out every other character.
 
+
+
+
 ***
 ## Question 7
 
 Initialize a String with a character. Show that it is a Character, and not another String, that you're using to initialize it.
+
+let myName = "Anna"
+
 
 ***
 ## Question 8
