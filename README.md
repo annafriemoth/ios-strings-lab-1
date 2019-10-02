@@ -100,6 +100,38 @@ let myName = "Anna"
 
 Build five pairs of **canonically equivalent** strings, the first of each being a pre-composed character and the second being one that uses combinable unicode scalars. Show that they are equivalent.
 
+````
+let myName = "A"
+let myName2 = "\u{0041}"
+if myName == myName2 {
+    print("same")
+}
+
+let myEmoji = "💙"
+let myEmoji2 = "\u{1F499}"
+if myEmoji == myEmoji2 {
+    print("same")
+}
+
+
+let myActualName = "Anna"
+let myActualNameUnicode = "\u{0041}nna"
+if myActualName == myActualNameUnicode {
+print("same")
+}
+
+let anotherName = "Anna"
+let anotherNameUnicode = "\u{0041}\u{006E}\u{006E}\u{0061}"
+if anotherName == anotherNameUnicode {
+print("same")
+}
+
+let anotherEmoji = "❤"
+let anotherEmojiUnicode = "\u{2764}"
+if anotherEmoji == anotherEmojiUnicode {
+print("same")
+}
+````
 ***
 ## Question 9
 
@@ -109,7 +141,10 @@ Build five pairs of **canonically equivalent** strings, the first of each being 
 ## Question 10
 
 **Using only Unicode**, print out your name.
-
+````
+let name = "\u{0041}\u{006E}\u{006E}\u{0061}"
+print(name)
+````
 ***
 ## Question 11
 
